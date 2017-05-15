@@ -141,15 +141,18 @@ git push fork master
 ### Compléter les tickets Waffle pour rendre les spécifications testables
 https://waffle.io/mdautrey/phpmatch/join
 
+### Créer le fichier de test
+- Aller dans le répertoire du projet
+- Créer un sous-répertoire src (sources)
+- Créer un sous-répertoire test (test)
+- Convention de nommage des fichiers de test => reprise de la convention phpunit.de (Test à la fin du fichier)
+- Initialiser le premier fichier de test MatchTest.php
 
-
-
-
-
-## Finaliser le mini-projet de vendredi
-A partir de l'exemple et des spécifications définies vendredi, écrire les tests et le code de l'objet match.
 
 # NodeJS
+## Quizz Javascript
+https://goo.gl/forms/jbdeHnycSDYKPdgm1
+
 ## Tester l'installation de nodejs
 Créer un répertoire nodetest et copier coller le fichier server.js :
 ```
