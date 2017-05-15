@@ -4,23 +4,27 @@ use PHPUnit\Framework\TestCase;
 
 
 final class MatchTest extends TestCase {
+    private function getDefaultMatch(){
+        return new Match('equipe1', 'equipe2', 1,0, "12/12/2012");
+    }
+
     // verifier la presence des "bons" attributs dans l objet
     public function testHasEquipe1(){
-        $this->assertObjectHasAttribute('equipe1', new Match);
+        $this->assertObjectHasAttribute('equipe1', getDefaultMatch());
     }
 
     public function testHasEquipe2(){
-        $this->assertObjectHasAttribute('equipe2', new Match);
+        $this->assertObjectHasAttribute('equipe2', getDefaultMatch());
     }
 
     public function testHasDateMatch(){
-        $this->assertObjectHasAttribute('dateMatch', new Match);
+        $this->assertObjectHasAttribute('dateMatch', getDefaultMatch());
     }
     // factoriser la verification des attributs
     public function testHasAttributes(){
       $attributes = array('equipe1', 'equipe2', 'score1', 'score2', 'dateMatch');
       foreach($attributes as $attribute){
-	$this->assertObjectHasAttribute($attribute, new Match);
+	$this->assertObjectHasAttribute($attribute, getDefaultMatch());
       }
     }
         
