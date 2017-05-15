@@ -15,3 +15,4 @@ final class MatchTest extends TestCase {
     public function testHasDateMatch(){
         $this->assertObjectHasAttribute('dateMatch', new Match);
     }
+}
