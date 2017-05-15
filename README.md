@@ -128,6 +128,15 @@ cd
 rm -fr phpmatch
 ```
 
+Synchronisation des repositories
+```
+git pull origin master
+git add <list des fichiers modifies>
+git commit -m "message pour expliquer ce que l'on a modifié"
+git push fork master
+```
+
+
 
 
 
