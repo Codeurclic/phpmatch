@@ -10,21 +10,21 @@ final class MatchTest extends TestCase {
 
     // verifier la presence des "bons" attributs dans l objet
     public function testHasEquipe1(){
-        $this->assertObjectHasAttribute('equipe1', getDefaultMatch());
+        $this->assertObjectHasAttribute('equipe1', $this->getDefaultMatch());
     }
 
     public function testHasEquipe2(){
-        $this->assertObjectHasAttribute('equipe2', getDefaultMatch());
+        $this->assertObjectHasAttribute('equipe2', $this->getDefaultMatch());
     }
 
     public function testHasDateMatch(){
-        $this->assertObjectHasAttribute('dateMatch', getDefaultMatch());
+        $this->assertObjectHasAttribute('dateMatch', $this->getDefaultMatch());
     }
     // factoriser la verification des attributs
     public function testHasAttributes(){
       $attributes = array('equipe1', 'equipe2', 'score1', 'score2', 'dateMatch');
       foreach($attributes as $attribute){
-	$this->assertObjectHasAttribute($attribute, getDefaultMatch());
+	$this->assertObjectHasAttribute($attribute, $this->getDefaultMatch());
       }
     }
         

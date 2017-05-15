@@ -8,8 +8,8 @@ final class Match{
     private $score2;
     
     public function __construct($equipe1, $equipe2, $score1, $score2, $dateMatch){
-      checkEquipe($equipe1);
-      checkEquipe($equipe2);
+      $this->checkEquipe($equipe1);
+      $this->checkEquipe($equipe2);
       $this->equipe1 = $equipe1;
       $this->equipe2 = $equipe2;
       $this->score1 = $score1;
