@@ -130,12 +130,16 @@ rm -fr phpmatch
 
 Synchronisation des repositories
 ```
+# depuis le repertoire phpmatch
 git pull origin master
-git add <list des fichiers modifies>
+touch mdautrey.txt
+git add mdautrey.txt
 git commit -m "message pour expliquer ce que l'on a modifié"
 git push fork master
 ```
-
+## Rédiger les tests du projet
+### Compléter les tickets Waffle pour rendre les spécifications testables
+https://waffle.io/mdautrey/phpmatch/join
 
 
 
