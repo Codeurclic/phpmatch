@@ -7,8 +7,7 @@ final class Match{
     private $score1;
     private $score2;
     
-    public __construct($equipe1, $equipe2, $score1,
-                        $score2, $dateMatch){
+    public function __construct($equipe1, $equipe2, $score1, $score2, $dateMatch){
       checkEquipe($equipe1);
       checkEquipe($equipe2);
       $this->equipe1 = $equipe1;
