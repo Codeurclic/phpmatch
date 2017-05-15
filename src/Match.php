@@ -25,7 +25,7 @@ final class Match{
             throw new InvalidArgumentException(
             sprintf('"%s" n est pas une equipe valide',$equipe)
             );
-    }
+        }
+    }  
     
 }
-
