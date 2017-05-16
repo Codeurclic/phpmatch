@@ -1,0 +1,27 @@
+{
+  "author": " ",
+  "name": "server",
+  "description": "Starts an HTTP server",
+  "version": "0.1.1",
+  "repository": {
+    "url": ""
+  },
+  "main": "./lib/server.js",
+  "keywords": [
+    "server",
+    "file"
+  ],
+  "bin": {
+    "index": "./bin/index"
+  },
+  "dependencies": {
+    "mocha": "^3.4.1"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+	"start": "node ./bin/index",
+	"test": "mocha"
+  }
+}
