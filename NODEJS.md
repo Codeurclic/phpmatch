@@ -28,10 +28,6 @@ nodejs server.js IMIE
 
 Aller sur http://localhost:8080/ pour vérifier que tout fonctionne correctement.
 
-## Installer mocha
-```
-sudo npm install mocha -g
-```
 
 ## Construire un projet initial
 ### Répertoires
@@ -40,17 +36,14 @@ sudo npm install mocha -g
 cd
 mkdir nodematch
 cd nodematch
-mkdir src
-cd src
 mkdir bin
 mkdir lib
 ```
 
 - lib = fichier de packaging du serveur
 - bin = fichiers application web
-- src = fichier définissant la construction de l'ensemble
 
-### src/lib/server.js
+### lib/server.js
 ```
 var http = require("http");
 
@@ -68,7 +61,7 @@ function begin() {
 
 exports.start = begin;
 ```
-### src/bin/index.js
+### bin/index.js
 ```
 "use strict";
 var path = require('path');
@@ -77,7 +70,7 @@ var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../lib');
 var server = require(lib+'/server.js');
 server.start();
 ```
-### src/package.json
+### package.json
 ```
 
 {
@@ -93,6 +86,41 @@ server.start();
   "engines": {"node": "*"}
 }
 ```
+### Installer Mocha à la racine du projet
+```
+npm install mocha --save
+```
+### Modifier le fichier package.json
+```
+{
+  "author": " ",
+  "name": "server",
+  "description": "Starts an HTTP server",
+  "version": "0.1.1",
+  "repository": {
+    "url": ""
+  },
+  "main": "./lib/server.js",
+  "keywords": [
+    "server",
+    "file"
+  ],
+  "bin": {
+    "index": "./bin/index"
+  },
+  "dependencies": {
+    "mocha": "^3.4.1"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "scripts": {
+    "start": "node ./bin/index",
+    "test": "mocha"
+  }
+}
+```
+
 
 
 
