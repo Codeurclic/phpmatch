@@ -21,7 +21,7 @@
     "node": "*"
   },
   "scripts": {
-	"start": "node ./bin/index",
-	"test": "mocha"
+    "start": "node ./bin/index",
+    "test": "mocha"
   }
 }
